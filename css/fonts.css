@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('../fonts/Baloo 2.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito.ttf') format('truetype');
+    font-display: swap;
+}
