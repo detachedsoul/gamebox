@@ -1,0 +1,109 @@
+.top-nav {
+    flex-grow: .5;
+}
+
+.top-nav,
+.nav-user-details {
+    gap: 2rem;
+}
+
+.search-container,
+.form-input {
+    width: 100%;
+}
+
+.container {
+    grid-template-columns: 2fr 10fr;
+    padding-bottom: 2rem;
+}
+
+.sidebar {
+    word-break: break-all;
+}
+
+.sidebar,
+.main-content {
+    padding: 2rem;
+}
+
+.main-content {
+    border-top-left-radius: 1rem;
+}
+
+.top {
+    padding: 2rem 4rem;
+}
+
+.top-content {
+    width: 50%;
+}
+
+.middle {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.middle-grid {
+    grid-template-columns: repeat(4, 3fr);
+    gap: 1.5rem;
+}
+
+.middle-grid,
+.bottom-grid {
+    margin-top: 1rem;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.card-img {
+    border-top-left-radius: .7rem;
+    border-top-right-radius: .7rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+}
+
+.card-text {
+    padding: 1rem;
+}
+
+.card-text .btn {
+    display: block;
+}
+
+.bottom {
+    padding: 2rem 1rem;
+}
+
+.bottom-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.bottom-grid .btn,
+.bottom-grid p {
+    margin: 0;
+}
+
+.bottom-grid-text-container {
+    grid-template-columns: 12fr 1fr;
+    column-gap: 2rem;
+}
+
+.bottom-grid-text {
+    margin-left: .5rem;
+    word-break: break-all;
+}
+
+.sub-header {
+    font-size: .9rem;
+}
+
+.bottom-grid-shadow {
+    padding: .5rem 1rem;
+    box-shadow: 5px 6px 30px 0 rgb(0 0 0 / 10%);
+}
