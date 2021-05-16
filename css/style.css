@@ -28,6 +28,7 @@ body {
     color: var(--dark-grey);
     font-size: 1.1rem;
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -203,9 +204,24 @@ p:not(.top-nav p):not(.bottom-grid p) {
     color: #F95F5F;
 }
 
-.form-input {
-    padding: .4rem 2rem;
+.form-input,
+.search-icon {
     border: 1px solid var(--dark-grey);
+    line-height: 1.6;
+}
+
+.form-input {
+    padding: .4rem 1.5rem .4rem .5rem;
+    border-top-right-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    border-left: none;
+}
+
+.search-icon {
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .7rem;
+    padding: .4rem .5rem .4rem 1.5rem;
+    border-right: none;
 }
 
 .top-content .btn:hover {
