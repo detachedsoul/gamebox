@@ -5,25 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameBox</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="icons/uicons.css">
-    <link rel="stylesheet" href="icons/all.min.css">
-</head>
-<body>
-    
-    <header class="flex align-center justify-between">
 
-        <div>
+    <!-- Preload stylesheets and scripts -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="icons/uicons.css" as="style">
+    <link rel="preload" href="icons/all.min.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
+
+    <!-- Actual stylehseet -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    
+    <header class="flex flex-column justify-between sticky bg-white">
+
+        <div class="nav-logo flex align-center justify-between">
+
             <a class="blue link" href="">
                 GameBox
             </a>
+
+            <div class="d-hide flex align-center">
+
+                <a class="search-toggle-btn" href="javascript:void(0)" aria-label="Search toggle icon">
+                    <i class="fr fi-rr-search relative"></i>
+                </a>
+
+                <a class="nav-toggle-btn" href="javascript:void(0)" aria-label="Navigation toggle icon">
+                    <span class="nav-toggle relative"></span>
+                </a>
+
+            </div>
+            
         </div>
 
-        <div class="top-nav flex align-center">
+        <div class="top-nav flex flex-column bg-white absolute">
             
-            <a class="dark-purple link" href="">
+            <a class="blue link" href="">
                 Categories
             </a>
 
@@ -34,25 +58,35 @@
                 <input class="form-input light-grey relative" type="text" name="search-field" placeholder="Search" autocomplete="off">
             </form>
 
-            <div class="nav-user-details flex align-center">
+            <div class="nav-user-details-container flex flex-column justify-between">
 
-                <a class="dark-purple" href="">
-                    <i class="fr fi-rr-envelope relative"></i>
-                </a>
+                <span class="user-notification flex align-center">
 
-                <a class="dark-purple" href="">
-                    <i class="fr fi-rr-bell relative"></i>
-                </a>
+                    <a class="dark-purple" href="" aria-label="Messages icon">
+                        <i class="fr fi-rr-envelope relative"></i>
+                    </a>
 
-                <img class="round" src="img/image-kira.jpg" alt="User Image" width="30" height="30">
+                    <a class="dark-purple" href="" aria-label="Notification icon">
+                        <i class="fr fi-rr-bell relative"></i>
+                    </a>
+
+                </span>
                 
-                <span>
-                    <h4 class="dark-purple">
-                        Wisdom Ojimah
-                    </h4>
-                    <p>
-                        detachedsoul@gmail.com
-                    </p>
+                <span class="nav-user-details flex align-center">
+
+                    <img class="round nav-user-image" src="img/image-kira.jpg" alt="User Image" width="30" height="30">
+
+                    <span>
+
+                        <h4 class="dark-purple">
+                            Wisdom Ojimah
+                        </h4>
+                        <p>
+                            detachedsoul@gmail.com
+                        </p>
+
+                    </span>
+
                 </span>
 
             </div>
@@ -60,51 +94,60 @@
         </div>
 
     </header>
-    
 
-    <div class="container grid">
 
-        <div class="sidebar flex flex-column justify-between">
+    <div class="container grid relative">
 
-            <nav>
-                <ul>
+        <div class="sidebar flex flex-column justify-between bg-white absolute">
+
+            <nav class="sticky">
+
+                <ul class="flex flex-column">
+
                     <li class="nav-item">
                         <a class="nav-link sidebar-link-color active border-7 flex align-center justify-between link" href="">
                             <i class="fr fi-rr-home relative"></i>
                             Dashboard
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link sidebar-link-color link" href="">
                             <i class="fr fi-rr-lock relative"></i>
                             My Library
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link sidebar-link-color link" href="">
                             <i class="fr fi-rr-backpack relative"></i>
                             Games
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link sidebar-link-color link" href="">
                             <i class="fr fi-rr-file-gif relative"></i>
                             Analytic
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link sidebar-link-color link" href="">
                             <i class="fr fi-rr-users relative"></i>
                             Team
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link sidebar-link-color link" href="">
                             <i class="fr fi-rr-star relative"></i>
                             Trophies
                         </a>
                     </li>
+
                 </ul>
+
             </nav>
 
             <a class="nav-link logout-btn link" href="">
@@ -138,13 +181,13 @@
 
             <div class="middle">
 
-                <div class="flex justify-between">
+                <div class="flex justify-between align-center">
 
                     <h3 class="dark-purple">
                         Most Popular Games
                     </h3>
 
-                    <a class="blue link view-all" href="">
+                    <a class="light-blue link hover-underline" href="">
                         View All
                     </a>
 
@@ -152,9 +195,9 @@
 
                 <div class="middle-grid grid">
 
-                    <div class="middle-card bg-white border-7">
+                    <div class="middle-card middle-card-active bg-white border-7">
 
-                        <img class="card-img" src="img/image-confetti.jpg" alt="Card 1">
+                        <img class="card-img" src="img/image-confetti.jpg" alt="Card 1" width="100%" height="150">
 
                         <div class="card-text">
 
@@ -186,7 +229,7 @@
 
                     <div class="middle-card bg-white border-7">
 
-                        <img class="card-img bg-orange" src="img/dota-2.png" alt="Dota 2: Reborn">
+                        <img class="card-img bg-orange" src="img/dota-2.png" alt="Dota 2: Reborn" width="100%" height="150">
 
                         <div class="card-text">
 
@@ -218,7 +261,7 @@
 
                     <div class="middle-card bg-white border-7">
 
-                        <img class="card-img active" src="img/lord-mobile.png" alt="Lords Mobile">
+                        <img class="card-img active" src="img/lord-mobile.png" alt="Lords Mobile" width="100%" height="150">
 
                         <div class="card-text">
 
@@ -250,7 +293,7 @@
 
                     <div class="middle-card bg-white border-7">
 
-                        <img class="card-img" src="img/fox-thief.png" alt="The Fox Thief">
+                        <img class="card-img" src="img/fox-thief.png" alt="The Fox Thief" width="100%" height="150">
 
                         <div class="card-text">
 
@@ -449,6 +492,16 @@
         </div>
 
     </div>
+
+
+    <!-- Stylesheets and scripts -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="icons/uicons.css">
+    <link rel="stylesheet" href="icons/all.min.css">
+    
+    <script src="js/main.js"></script>
+
 
 </body>
 </html>
