@@ -366,7 +366,9 @@ p:not(.top-nav p):not(.bottom-grid p) {
     transform: rotateX(90deg);
     transform-origin: 0 0;
     gap: 2rem;
-    z-index: 1000000;
+    z-index: 1024;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 .top-nav-show {
@@ -387,7 +389,6 @@ p:not(.top-nav p):not(.bottom-grid p) {
     height: 100vh;
     width: auto;
     top: 4rem;
-    z-index: 1000000;
     transition: .5s;
     justify-content: normal;
 }

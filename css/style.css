@@ -32,9 +32,23 @@
 @media only screen and (min-width: 550px) {
 
     .top,
-    .middle {
+    .middle,
+    .bottom {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+
+    .card-text {
+        padding: 1.5rem 2.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .card-text {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
 }
@@ -52,7 +66,8 @@
 
     .search-toggle-btn,
     .top,
-    .middle {
+    .middle,
+    .bottom {
         margin-right: 0;
     }
 
@@ -69,7 +84,6 @@
 
     .sidebar {
         position: static;
-        background-color: transparent;
         width: auto;
         height: auto;
         justify-content: space-between;
@@ -82,7 +96,8 @@
 
     .logout-btn,
     .top,
-    .middle {
+    .middle,
+    .bottom {
         margin-left: 0;
     }
 
@@ -220,6 +235,8 @@
         height: auto;
         transform: rotateX(0);
         padding: 0;
+        border-radius: none;
+        box-shadow: none;
     }
 
     .top-nav .link {
